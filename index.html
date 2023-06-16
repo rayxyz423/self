@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>自主學習</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+<style>
+  .place{
+    font-size: 20px;
+  }
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+  <head>
+    
+    <title>Leying Studio - Website</title>
+  </head>
+  <body>
+<!--  Navigation Bar    -->
+    <nav id="navigation" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">程式設計</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarButtons" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarButtons">          
+          <ul class="nav navbar-nav navbar-right">
+            <li id="navAbout" class="btn navbar-btn navActive">
+              <a href="#title3">Timer</a></li>
+            <li id="navServices" class="btn navbar-btn"><a href="#title2">calculator</a></li>
+            <li id="navContact" class="btn navbar-btn"> <a href="#title1">CNSH</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<!--  Top page image    -->
+ <div class="parallaxTop">
+   <div class="jumboBanner shadow">
+    
+     <h1 class="banner">自主學習</h1>
+     <h3 class="motto">李苡菁/林思妮/柯禹彤/陳榕誼</h3>
+     <button id="bannerBtn" class="bannerBtn">LETS GO!</button>
+   </div>
+  
+ </div>
+<!--  Main content   -->    
+<!--  About row      -->
+<div id="aboutBlock" class="container">
+  <!-- <div id="aboutRow" class="row"> -->
+  <!-- <div class="aboutLeft col-xs-12 col-sm-6 cloak"> -->
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="row"></div>
+  </div>
+</div>
+            <div class="col-md-3"></div>
+            <!-- <div class="aboutImg col-md-9"></div> -->
+          </div>
+        </div>
+        <!-- <div class="aboutRight col-xs-12 col-sm-6"> -->
+          <div class="row">
+            <article id="title3"></article>
+            <br><br><br>
+            <div class="gsat">
+              
+                <h2 style="color:#000; text-align: center;">GSAT Timer</h2>
+              
+              <hr />
+            </div>
+            </div>
+            <br>
+            <script language="JavaScript">
+              function ShowTimes() {
+                var AfterTime = new Date("Jan 19 00:00:00  2024");
+                LeaveTime = AfterTime - new Date();
+                LeaveDays = Math.floor(LeaveTime / (1000 * 60 * 60 * 24));//天    
+                LeaveHours = Math.floor(LeaveTime / (1000 * 60 * 60) % 24);//時    
+                LeaveMinutes = Math.floor(LeaveTime / (1000 * 60) % 60);//分    
+                LeaveSeconds = Math.floor(LeaveTime / 1000 % 60);//秒    
+                var c = new Date();
+                var q = c.getMilliseconds();
+                if (q < 10) {                               //因为毫秒为一位数时只占一个字符位置，会让毫秒二字变动位置   
+                  q = "00" + c.getMilliseconds();
+                }
+                if (q >= 10 && q < 100) {                     //因为毫秒为两位数时只占两个字符位置，会让毫秒二字变动位置  
+                  q = "0" + c.getMilliseconds();
+                }
+                if (LeaveDays < 0) {
+                  document.getElementById("tian").innerHTML = '00';
+                }
+                else {
+                  document.getElementById("tian").innerHTML = LeaveDays;
+                }
+
+                if (LeaveHours < 0) {
+                  document.getElementById("shi").innerHTML = '00';
+                }
+                else {
+                  document.getElementById("shi").innerHTML = LeaveHours;
+                }
+
+                if (LeaveMinutes < 0) {
+                  document.getElementById("fen").innerHTML = '00';
+                }
+                else {
+                  document.getElementById("fen").innerHTML = LeaveMinutes;
+                }
+
+                if (LeaveSeconds < 0) {
+                  document.getElementById("miao").innerHTML = '00';
+                }
+                else {
+                  document.getElementById("miao").innerHTML = LeaveSeconds;
+                }
+                hxtime.innerHTML = "<font color=red>" + LeaveDays + "</font>天<font color=red>" + LeaveHours + "</font>時<font color=red>" + LeaveMinutes + "</font>分<font color=red>" + LeaveSeconds + "</font>秒";
+              }
+              setInterval(ShowTimes, 10);    
+            </script>
+            <div style="font-weight: bolder; font-size: 40px; text-align:center">113學測倒數</div>
+            <div style="font-weight: bolder; font-size: 42px; text-align:center" id="hxtime"></div>
+            <div  id="tian"></div>
+            <div  id="shi"></div>
+            <div  id="fen"></div>
+            <div  id="miao"></div>
+            </div>
+            </div>
+            <br><br><br>
+          </div>
+          <div class="col-md-3"></div>          
+        </div>
+      </div>
+    </div>
+<!--  Services row      -->
+    <div id="servicesRow" class="parallaxSection">
+      <div class="shadowSection">
+        <h2>CNSH</h2>
+        <hr />
+      </div>
+    </div>
+    <div class="container">
+      <div id="contactRow" class="contactForm row">
+        <h2 style="border: 2px solid;">國立竹南高級中學 校園地圖</h2>
+        <br><br><br>
+        <img src="校園平面圖.jpg" alt="">
+        <br>
+          <tr>
+            <td><a href="https://lyjray423.github.io/liberary/"  style="margin: 20px;" class="place">圖書館</a></td>
+            <td><a href="https://lyjray423.github.io/pg/"  style="margin: 20px;" class="place">操場</a></td>
+            <td><a href="https://lyjray423.github.io/study/"  style="margin: 20px;" class="place">薰風樓</a></td>
+          </tr>
+          <br>
+          <br>
+          <tr>
+            <td><a href="https://lyjray423.github.io/s/" style="margin: 20px;" class="place">科學樓</a></td>
+            <td><a href="https://lyjray423.github.io/sport/" style="margin: 20px;" class="place">樂活中心</a></td>
+            <td><a href="https://lyjray423.github.io/other/" style="margin: 20px;" class="place">其他</a></td>
+          </tr>
+          </div>
+
+      
+
+
+    </div>
+    
+    <article id="title1"></article>
+    <br><br>
+<!--  Contact form      -->
+      <!-- <div id="phoneContact" class="phoneContact row"> -->
+        
+        <div id="servicesRow" class="parallaxSection">
+          <div class="shadowSection">
+        <!-- <div class="container"> -->
+          <h2>Calculator</h2>
+          <hr>
+        </div>
+        </div>
+      </div> 
+      
+    <br><br><br><br>
+    <div id="serviceBlocks" class="row" style="text-align: center;">
+      <div class="container">
+        <div class="cal">
+          <div id="result" class="cal_display" style="border:#000; font-size: 50px;"></div>
+          <div class="cal_key">
+            <br>
+            <button style="width: 75px; height:75px" id="button1">
+              <h3>1</h3>
+            </button>
+            <button style="width: 75px; height:75px" id="button2">
+              <h3>2</h3>
+            </button>
+            <button style="width: 75px; height:75px" id="button3">
+              <h3>3</h3>
+            </button>
+            <button style="width: 75px; height:75px" id="buttona" class="key--operator" data-action="add"="">
+              <h3>+</h3>
+            </button>
+            <br>
+            <button style="width: 75px; height:75px" id="button4">
+              <h3>4</h3>
+            </button>
+            <button style="width: 75px; height:75px" id="button5">
+              <h3>5</h3>
+            </button>
+            <button style="width: 75px; height:75px" id="button6">
+              <h3>6</h3>
+            </button>
+            <button style="width: 75px; height:75px" id="buttonb" class="key--operator" data-action="subtract">
+              <h3>-</h3>
+            </button>
+            <br>
+            <button style="width: 75px; height:75px" id="button7">
+              <h3>7</h3>
+            </button>
+            <button style="width: 75px; height:75px" id="button8">
+              <h3>8</h3>
+            </button>
+            <button style="width: 75px; height:75px" id="button9">
+              <h3>9</h3>
+            </button>
+            <button style="width: 75px; height:75px" id="buttonc" class="key--operator" data-action="multiply">
+              <h3>×</h3>
+            </button>
+            <br>
+            <button style="width: 75px; height:75px" id="button0">
+              <h3>0</h3>
+            </button>
+            <button style="width: 75px; height:75px" id="buttone" class="key--operator" data-action="calculate">
+              <h3>=</h3>
+            </button>
+            <button style="width: 75px; height:75px" id="buttonac" style="width: 30px;">
+              <h3>AC</h3>
+            </button>
+            <button style="width: 75px; height:75px" id="buttond" class="key--operator" data-action="divide">
+              <h3>÷</h3>
+            </button>
+          </div>
+        </div>
+        <script>
+                  // function typing(number){
+                  //     console.log(document.getElementById('result').getAttribute('value'))
+                  //     var formula = document.getElementById('result').value === undefined? "": document.getElementById('result').value
+                  //     document.getElementById('result').innerHTML = formula + number
+                  // }
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+          $(document).ready(function () {
+            $("#button1").click(function () {
+              var res = $('#result').text();
+              document.getElementById('result').innerHTML = res + "1"
+              console.log(res)
+            });
+            $("#button2").click(function () {
+              var res = $('#result').text();
+              document.getElementById('result').innerHTML = res + "2"
+              console.log(res)
+            });
+            $("#button3").click(function () {
+              var res = $('#result').text();
+              document.getElementById('result').innerHTML = res + "3"
+              console.log(res)
+            });
+            $("#button4").click(function () {
+              var res = $('#result').text();
+              document.getElementById('result').innerHTML = res + "4"
+              console.log(res)
+            });
+            $("#button5").click(function () {
+              var res = $('#result').text();
+              document.getElementById('result').innerHTML = res + "5"
+              console.log(res)
+            });
+            $("#button6").click(function () {
+              var res = $('#result').text();
+              document.getElementById('result').innerHTML = res + "6"
+              console.log(res)
+            });
+            $("#button7").click(function () {
+              var res = $('#result').text();
+              document.getElementById('result').innerHTML = res + "7"
+              console.log(res)
+            });
+            $("#button8").click(function () {
+              var res = $('#result').text();
+              document.getElementById('result').innerHTML = res + "8"
+              console.log(res)
+            });
+            $("#button9").click(function () {
+              var res = $('#result').text();
+              document.getElementById('result').innerHTML = res + "9"
+              console.log(res)
+            });
+            $("#button0").click(function () {
+              var res = $('#result').text();
+              document.getElementById('result').innerHTML = res + "0"
+              console.log(res)
+            });
+            $("#buttona").click(function () {
+              var res = $('#result').text();
+              document.getElementById('result').innerHTML = res + "+"
+              if (res[res.length - 1] === "+" || res[res.length - 1] === "-" || res[res.length - 1] === "*" || res[res.length - 1] === "/" || res[res.length - 1] === "") {
+                res = res.replace(res[res.length - 1], "+")
+                console.log(res)
+                document.getElementById('result').innerHTML = res
+              } else {
+                document.getElementById('result').innerHTML = res + "+"
+              }
+              console.log(res)
+            });
+            $("#buttonb").click(function () {
+              var res = $('#result').text();
+              document.getElementById('result').innerHTML = res + "-"
+              if (res[res.length - 1] === "+" || res[res.length - 1] === "-" || res[res.length - 1] === "*" || res[res.length - 1] === "/" || res[res.length - 1] === "") {
+                res = res.replace(res[res.length - 1], "-")
+                console.log(res)
+                document.getElementById('result').innerHTML = res
+              } else {
+                document.getElementById('result').innerHTML = res + "-"
+              }
+              console.log(res)
+            });
+            $("#buttonc").click(function () {
+              var res = $('#result').text();
+              document.getElementById('result').innerHTML = res + "*"
+              if (res[res.length - 1] === "+" || res[res.length - 1] === "-" || res[res.length - 1] === "*" || res[res.length - 1] === "/" || res[res.length - 1] === "") {
+                res = res.replace(res[res.length - 1], "*")
+                console.log(res)
+                document.getElementById('result').innerHTML = res
+              } else {
+                document.getElementById('result').innerHTML = res + "*"
+              }
+              console.log(res)
+            });
+            $("#buttond").click(function () {
+              var res = $('#result').text();
+              document.getElementById('result').innerHTML = res + "/"
+              if (res[res.length - 1] === "+" || res[res.length - 1] === "-" || res[res.length - 1] === "*" || res[res.length - 1] === "/" || res[res.length - 1] === "") {
+                res = res.replace(res[res.length - 1], "/")
+                console.log(res)
+                document.getElementById('result').innerHTML = res
+              } else {
+                document.getElementById('result').innerHTML = res + "/"
+              }
+              console.log(res)
+            });
+            $("#buttone").click(function () {
+              var res = $('#result').text();
+              document.getElementById('result').innerHTML = eval(res)
+              console.log(res)
+            });
+            $("#buttonac").click(function () {
+              var res = $('#result').text();
+              document.getElementById('result').innerHTML = ""
+              console.log(res)
+            });
+          });
+        </script>
+        <div id="serviceBlocks" class="row">
+          <div class="container1">
+            <div class="serviceBlock col-md-4">
+    
+            </div>
+            <div class="serviceBlock col-md-4">
+    
+            </div>
+            <div class="serviceBlock col-md-4">
+    
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  Contact info      -->
+    <div id="contactInfo" class="row">
+      <div class="container" style="text-justify: auto;">
+        <div class="contactStack col-md-4">
+          <h4>ADDRESS</h4>
+          <p>123 Test Avenue</p>
+          <p>Charlotte, NC 28216</p>
+        </div>
+        <div class="contactStack col-md-4">
+          <h4>OPERATION HOURS</h4>
+          <p>Mon-Thurs: 10:00 AM - 11:00 PM</p>
+          <p>Fri-Sun: 11:00 AM - 02:00 AM</p>
+        </div>
+        <div class="contactStack col-md-4">
+          <h4>CONTACT INFO</h4>
+          <p>Phone: 555-555-5555</p>
+          <p>Email: email@Leying Studio.com</p>
+        </div>
+        
+      </div>
+    </div>
+
+<!--  Copyright    -->
+    <div id="copyright" class="row">
+      <div class="container">
+        <div id="socialBtn">
+          <a href="https://www.instagram.com/zray8632/" class="social"><img id="facebook"></a>
+          <a href="https://www.instagram.com/nini_iridescent/" class="social"><img id="twitter"></a>
+          <a href="https://www.instagram.com/tong_95_0314/" class="social"><img id="linkedin"></a>
+          <a href="https://www.instagram.com/yichen_950412/" class="social"><img id="linkedin"></a>
+        </div>
+        <p>&copy; 2023 自主學習成果 </p>
+      </div>
+    </div>
+  </body>
+</html>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
