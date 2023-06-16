@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
+</head>
+
+<body>
+
+
+  <div class="owl-carousel owl-theme">
+    <img src="01.jpg">
+    <img src="2.jpg">
+    <img src="3.jpg">
+    <img src="4.jpg">
+    <img src="5.jpg">
+    <img src="6.jpg">
+    <img src="11.jpg">
+    
+  </div>
+
+<br><br><br><br>
+<h1 style="color: purple;">設施介紹</h1>
+<hr>
+<ul style="font-size: 25px;">
+  <li>棒球場</li>
+  <li>風雨球場</li>
+  <li>室外球場</li>
+  <li>排球場</li>
+  <li>單槓區</li>
+</ul>
+
+
+
+  <script src="jquery-3.6.4.min.js"></script>
+  <script src="owl/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          768: {
+            items: 2
+          },
+          1024: {
+            items: 3
+          },
+          1200: {
+            items: 5
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

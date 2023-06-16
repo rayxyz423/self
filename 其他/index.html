@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
+</head>
+
+<body>
+
+
+  <div class="owl-carousel owl-theme">
+    <img src="01.jpg">
+    <img src="2.jpg">
+    <img src="3.jpg">
+    <img src="4.jpg">
+    <img src="5.jpg">
+    <img src="6.jpg">
+    <img src="7.jpg">
+    <img src="8.jpg">
+    <img src="9.jpg">
+    <img src="10.jpg">
+    <img src="12.jpg">
+  </div>
+
+  <h1 style="color: purple;">地點介紹</h1>
+  <hr>
+  <ul style="font-size: 25px;">
+    <li>椰林大道（位於東棟前與資源館前）</li><br>
+    <li>東棟（位於薰風樓左前方）</li><br>
+    <li>員生社（位於東棟右後方）</li><br>
+    <li>化工科實習館（位於員生社旁）</li><br>
+    <li>宿舍（位於圖書館旁邊）</li><br>
+    <li>藝能大樓（位於宿舍旁、活動中心前）</li><br>
+    <li>噴水池（位於穿堂後）</li><br>
+    <li>車棚（位於活動中心後）</li><br>
+    <li>側門（位於宿舍與藝能大樓中間）</li><br>
+    <li>活動中心（位於風雨球場旁）</li>
+
+  </ul>
+
+
+
+
+  <script src="jquery-3.6.4.min.js"></script>
+  <script src="owl/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          768: {
+            items: 2
+          },
+          1024: {
+            items: 3
+          },
+          1200: {
+            items: 5
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

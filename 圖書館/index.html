@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
+</head>
+<body>
+  
+  
+  <div class="owl-carousel owl-theme">
+   <img src="2.jpg">
+   <img src="3.jpg">
+   <img src="4.jpg">
+   <img src="5.jpg">
+   <img src="6.jpg">
+   <img src="7.jpg">
+   <img src="8.jpg">
+  </div>
+  <br>
+  <div class="i">
+    <h1 style="color: purple;">圖書館組織現況</h1>
+    <hr>
+    <h3 style="font-size: 30px;">
+      圖書館主任---鄒主任 分機500<br>
+      資訊媒體組組長---陳組長 分機501<br>
+      圖書館館員---高小姐 分機502
+    </h3>
+    <br><br><br><br>
+    <h1 style="color: purple;">開放時間</h1>
+    <hr>
+    <ul style="font-size: 20px;">
+      <li>一樓閱覽室及借還書：週一至週五 09:00 至18:00。</li>
+      <li>二、三樓閱覽室每日 18:00 至 21:00 由教務處商請教師夜間輔導。</li>
+      <li>例假日及寒暑假開放時間得依實際需要調整之。</li>
+      <li>延長開放時間：夜間依需要彈性開放 18:00 至 21:00。</li>
+    </ul>
+    <br><br><br><br>
+    <h1 style="color: purple;">館史簡介</h1>
+    <hr>
+    <h2>沿革本館自本校民國五十七年八月創校，原隸屬教務處設備組之圖書室，民國七十一年八月新館現址興建落成正式遷入。七十四年奉教育廳指示，成為獨立單位–臺灣省立竹南高級中學圖書館。七十九年著手規劃「圖書館自動化」，八十年完成「圖書館自動化」，並且與「校園行政網路」連線。八十四年十二月圖書館完成學術網路(TANet)連線，成立「網際網路(InterNet)資源服務區」。</h2>
+  </div>
+  
+  
+  
+  <script src="jquery-3.6.4.min.js"></script>
+  <script src="owl/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          768: {
+            items: 2
+          },
+          1024: {
+            items: 3
+          },
+          1200: {
+            items: 5
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

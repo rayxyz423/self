@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
+</head>
+
+<body>
+
+
+  <div class="owl-carousel owl-theme">
+    <img src="01.jpg">
+    <img src="2.jpg">
+    <img src="3.jpg">
+    <img src="4.jpg">
+    <img src="5.jpg">
+    <img src="6.jpg">
+  
+  </div>
+    <h1 style="color: purple;">樓層介紹</h1>
+    <hr>
+    <ul style="font-size:25px">
+      <li>一樓</li>
+        <ul><li>健康中心</li><li>輔導室</li><li>體育組</li><li>學習中心</li></ul>
+      <li>二樓</li>
+      <ul>
+        <li>設備組</li>
+        <li>生物實驗室</li>
+        <li>團體諮商室</li>
+        </ul>
+        <li>三樓</li>
+        <ul>
+          <li>導師辦公室</li>
+          <li>物理實驗室</li>
+        </ul>
+        <li>四樓</li>
+        <ul>
+          <li>化學實驗室</li>
+          
+        </ul>
+
+    </ul>
+
+
+
+  <script src="jquery-3.6.4.min.js"></script>
+  <script src="owl/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          768: {
+            items: 2
+          },
+          1024: {
+            items: 3
+          },
+          1200: {
+            items: 5
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

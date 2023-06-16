@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
+</head>
+
+<body>
+
+
+  <div class="owl-carousel owl-theme">
+    <img src="01.jpg">
+    <img src="2.jpg">
+    <img src="3.jpg">
+    <img src="4.jpg">
+    <img src="5.jpg">
+    <img src="6.jpg">
+    <img src="7.jpg">
+    <img src="22.jpg">
+  </div>
+<br><br><br><br>
+<h1 style="color: purple;">公共藝術</h1>
+<hr>
+<ul>
+  <li>前程似錦（四樓女廁旁邊）</li>
+  <li>客家花布（四樓女廁旁）</li>
+  <li>力爭上游（大樓梯）</li>
+  <li>喜鵲（四樓）</li>
+</ul>
+
+
+
+  <script src="jquery-3.6.4.min.js"></script>
+  <script src="owl/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          768: {
+            items: 2
+          },
+          1024: {
+            items: 3
+          },
+          1200: {
+            items: 5
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
